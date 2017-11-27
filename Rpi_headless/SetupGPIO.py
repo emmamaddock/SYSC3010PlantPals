@@ -14,4 +14,3 @@ def setupGPIO():
         GPIO.setup(pin,GPIO.OUT)
         GPIO.output(pin,0)
     
-  
