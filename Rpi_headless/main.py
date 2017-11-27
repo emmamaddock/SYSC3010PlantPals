@@ -11,7 +11,7 @@ import RPi.GPIO as GPIO
 import time
 import SetupGPIO as set
 
-set.setupGPIO()
+set.setup_Stepper_GPIO()
 
 
 # give a value in Tf
