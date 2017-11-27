@@ -16,7 +16,7 @@ for pin in ControlPin:
     GPIO.setup(pin,GPIO.OUT)
     GPIO.output(pin,0)
     
-    pin = 23
+pin = 23
 GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,0)
 
