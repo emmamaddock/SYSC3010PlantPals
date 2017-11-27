@@ -1,7 +1,7 @@
 '''
 Created on Nov 25, 2017
 
-@author: TZ-WORKSTATION
+@author: Muhammad Tarequzzaman |100954008|
 '''
 
 import StepperMotor as st
