@@ -60,12 +60,19 @@ def stepBackward(Tb):  # call this function to run stepper motor backward for gi
         for halfstep in range(4):
             for pin in range(4):
                 GPIO.output(ControlPin[pin], fbackstep[halfstep][pin])
-                time.sleep(0.001)	    
+                time.sleep(0.001)        
         Tb = Tb-1    
                     
     
     
 def cleanGPIO(): # call this function to clean up GPIO setup 
     GPIO.cleanup()       
-    
+
+
+def stopMotor():
+    for pin in range(4):
+                GPIO.output(ControlPin[pin], 0)
+    #cleanGPIO()
+
+
     
