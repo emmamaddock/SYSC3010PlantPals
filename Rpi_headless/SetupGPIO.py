@@ -14,5 +14,6 @@ def setup_Stepper_GPIO():
         GPIO.output(pin,0)
 
 def setup_pump_GPIO(pin):
+     GPIO.setmode(GPIO.BCM)  
         GPIO.setup(pin,GPIO.OUT)
         GPIO.output(pin,0) 

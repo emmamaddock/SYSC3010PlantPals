@@ -11,8 +11,8 @@ import RPi.GPIO as GPIO
 import time
 import SetupGPIO as set
 
-set.setupGPIO()
-
+set.setup_Stepper_GPIO():
+set.setup_pump_GPIO(23):
 
 # give a value in Tf
 st.stepForward(200)
