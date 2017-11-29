@@ -67,5 +67,12 @@ def stepBackward(Tb):  # call this function to run stepper motor backward for gi
     
 def cleanGPIO(): # call this function to clean up GPIO setup 
     GPIO.cleanup()       
-    
+
+
+def stopMotor():
+    for pin in range(4):
+                GPIO.output(ControlPin[pin], 0)
+    #cleanGPIO()
+
+
     

@@ -14,12 +14,12 @@ pin = 23
 GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,0)
     
-def activate():# Call this function to activate Water pump
-    while True: 
-        GPIO.output(pin,1) 
+def activate():# Call this function to activate Water pump 
+    GPIO.output(pin,1) 
     
 def deactivate():# Call this function to deactivate Water pump
     GPIO.output(pin,0)
      
-def cleanGPIO():#Call this function to clean up GPIO 
+def cleanGPIO():#Call this function to clean up GPIO
+    GPIO.output(pin,0)
     GPIO.cleanup()       
