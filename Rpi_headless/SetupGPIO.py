@@ -6,7 +6,7 @@ Created on Nov 26, 2017
 import RPi.GPIO as GPIO
 
 def setup_Stepper_GPIO():
-    ControlPin = [4,17,27,2,23]
+    ControlPin = [4,17,27,22]
     GPIO.setmode(GPIO.BCM)   
 # GPIO pin setting up  
     for pin in ControlPin:
