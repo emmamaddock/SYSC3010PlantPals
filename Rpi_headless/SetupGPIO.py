@@ -18,3 +18,6 @@ def setup_Stepper_GPIO():
 def setup_pump_GPIO(pin):
         GPIO.setup(pin,GPIO.OUT)
         GPIO.output(pin,0) 
+                
+def cleanGPIO():#Call this function to clean up GPIO 
+    GPIO.cleanup()             

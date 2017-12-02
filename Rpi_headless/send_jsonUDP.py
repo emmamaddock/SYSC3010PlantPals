@@ -1,5 +1,8 @@
 import socket
 import read_serial as S
+import requests as R
+
+
 # addressing information of target
 IPADDR = '8.4.2.1'
 PORTNUM = 10000
