@@ -5,6 +5,7 @@ Created on Nov 26, 2017
 '''
 import RPi.GPIO as GPIO
 
+#setting up GPIO pin for stepper motor
 def setup_Stepper_GPIO():
     ControlPin = [4,17,27,22]
     GPIO.setmode(GPIO.BCM)   
@@ -13,6 +14,7 @@ def setup_Stepper_GPIO():
         GPIO.setup(pin,GPIO.OUT)
         GPIO.output(pin,0)
 
+#setting up Pump GPIO
 def setup_pump_GPIO(pin):
         GPIO.setup(pin,GPIO.OUT)
         GPIO.output(pin,0) 
