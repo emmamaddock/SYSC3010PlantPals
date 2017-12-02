@@ -11,7 +11,7 @@ import RPi.GPIO as GPIO
 import time
 import SetupGPIO as set
 import Send_Json_HTTP as SHTTP 
-#ll
+
 
 
 set.setup_pump_GPIO(23)
