@@ -15,7 +15,7 @@ import Send_Json_HTTP as SHTTP
 #
 
 #set.setup_pump_GPIO(23)
-#set.setup_Stepper_GPIO()
+set.setup_Stepper_GPIO()
 
 SHTTP.requestJson()
 SHTTP.sendJson()
