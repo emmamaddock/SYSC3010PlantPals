@@ -17,7 +17,6 @@ jtest_json = json.dumps(jtest)
 #data_json = json.dumps(data)
 payload = {'json_playload': jtest_json}
 
-
 def requestJson():
      R.get(serverURL)
     
