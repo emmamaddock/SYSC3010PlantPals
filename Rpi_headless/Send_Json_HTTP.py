@@ -5,14 +5,26 @@ Created on Dec 2, 2017
 '''
 import requests as R
 import read_serial as serial 
-
+import json
 serverIP = '192.168.0.14'
 serverURL = 'http://192.168.0.14/tarik.php'
 #jdata= serial.returnSerial()
-jdata = '{"json":"TEST"}'
+
+jtest = {'Plant1':0}
+jtest_json = json.dumps(jtest)
+
+#data = {"temp_value":132}
+#data_json = json.dumps(data)
+payload = {'json_playload': jtest_json}
+
 
 def requestJson():
-    R.get(serverURL)
+     R.get(serverURL)
     
 def sendJson():
-     R.post(serverIP , jdata)
+    #R.get(serverURL, jtest_json = payload)
+    #R.post(serverIP , jtest)
+    r = R.post(serverURL, data = jtest)
+    print(r.status_code,r.reason)
+     
+

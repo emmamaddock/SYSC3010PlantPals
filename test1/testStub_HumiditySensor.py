@@ -6,7 +6,7 @@ Created on Nov 18, 2017
 import unittest
 
 import Stub_HumiditySensor
-from mockHumiditySensor import mockdata
+import Stub_HumiditySensor as  mockdata
 
 class Test(unittest.TestCase):
     
