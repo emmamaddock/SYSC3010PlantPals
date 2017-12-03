@@ -55,7 +55,7 @@ def stepForward(Tf): # call this function to run stepper motor forward for given
         Tf=Tf-1
 
 def stepBackward(Tb):  # call this function to run stepper motor backward for given time in second as a argument.
-    
+
     while Tb !=0:
         for halfstep in range(4):
             for pin in range(4):

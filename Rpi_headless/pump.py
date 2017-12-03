@@ -15,7 +15,6 @@ GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,0)
     
 def activate():# Call this function to activate Water pump
-    while True: 
         GPIO.output(pin,1) 
     
 def deactivate():# Call this function to deactivate Water pump
