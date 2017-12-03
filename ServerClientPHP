@@ -1,0 +1,85 @@
+<?php 
+//PHP<->hardware client code
+//SYSC 3010
+//Team M6 Plant Pals
+//Author: Emma Maddock
+//Description: inserts data from moisture sensors into plant_data table and returns position of plants
+//that need to be watered
+
+//defining the user and password that already has access to the database
+$hostname = 'localhost';
+$username = 'apache';
+$password = 'Temp123!';
+$db = 'web_plants';
+
+//establishing a connection
+$conn = mysqli_connect($hostname,$username,$password,$db) or die('Cannot connect to the DB');
+
+//receiving moisture data from each plant from the moisture sensors
+$Plant1=$_GET['Plant1'];
+$Plant2=$_GET['Plant2'];
+$Plant3=$_GET['Plant3'];
+
+
+//creating a timestamp to enter into the database
+$curr_date= new DateTime();
+$curr_date->format('Y-m-d H:i:s');
+$curr_date->getTimestamp();
+
+
+//Doing 3 separate inserts into plant_data for each of the moisture sensors
+//*************************************************************************
+//inserting the first moisture sensor's data
+$sql1="insert into plant_data (current_moisture,date_collected,plant_id)  values(".$Plant1.",'".$curr_date."',".1.")";
+ $result1 = $conn->query($sql1);
+
+//inserting the second
+$sql2="insert into plant_data (current_moisture,date_collected,plant_id)  values(".$Plant2.",'".$curr_date."',".2.")";
+ $result2 = $conn->query($sql2);
+
+//inserting the third
+$sql3="insert into plant_data (current_moisture,date_collected,plant_id)  values(".$Plant3.",'".$curr_date."',".3.")";
+ $result3 = $conn->query($sql3);
+//***************************************************
+
+//selecting out of the last 3 entries in plant_data where the current moisture level is
+//below the ideal moisture for that particular plant
+//************************************************************************************************
+
+//checking the first plant's current moisture against its ideal moisture
+$sql4="SELECT pd.current_moisture  FROM plant_data pd LEFT JOIN plants pl ON pd.plant_id=pl.id  where pl.id=1 and pd.current_moisture < ( select ideal_moisture from plants where id=1)  order$
+$result4 = $conn->query($sql4);
+
+//checking the second plant
+$sql5="SELECT pd.current_moisture  FROM plant_data pd LEFT JOIN plants pl ON pd.plant_id=pl.id  where pl.id=2 and pd.current_moisture < ( select ideal_moisture from plants where id=2)  order$
+$result5 = $conn->query($sql5);
+
+//checking the third plant
+$sql6="SELECT pd.current_moisture  FROM plant_data pd LEFT JOIN plants pl ON pd.plant_id=pl.id  where pl.id=3 and pd.current_moisture < ( select ideal_moisture from plants where id=3) order $
+$result6 = $conn->query($sql6);
+
+//****************************************************
+
+
+//now going through each result and echoing the position to be watered
+//if the query doesn't come up null (meaning there's an entry where the current
+//moisture is less than its ideal moisture). if all three are empty,
+//returns a 0 which means don't water anything
+
+if ($result4 ! empty()) {
+        echo 1;
+}
+else if ($result5 ! empty()) {
+        echo 2;
+}
+else if ($result6 ! empty()) {
+        echo 3;
+}
+else {
+        echo 0;
+}
+
+$conn->close();
+
+?>
+
