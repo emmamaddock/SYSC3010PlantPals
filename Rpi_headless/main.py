@@ -11,14 +11,18 @@ import RPi.GPIO as GPIO
 import time
 import SetupGPIO as set
 import Send_Json_HTTP as SHTTP 
-
+import plantSpecific as ps
 #
 
-#set.setup_pump_GPIO(23)
+set.setup_pump_GPIO(23)
 set.setup_Stepper_GPIO()
 
-SHTTP.requestJson()
-SHTTP.sendJson()
+#SHTTP.requestJson()
+#SHTTP.sendJson()
+
+ps.plant1()
+#ps.plant2()
+
 #===============================================================================
 # # give a value in Tf
 # st.stepForward(200)
