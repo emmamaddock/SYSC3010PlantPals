@@ -6,15 +6,12 @@ Created on Nov 24, 2017
 
 import RPi.GPIO as GPIO
 import time
-# GPIO pin mode setting up 
-GPIO.setmode(GPIO.BCM)
+import SetupGPIO as set
 
-ControlPin = [4,17,27,22]
-# GPIO pin setting up  
-for pin in ControlPin:
-    GPIO.setup(pin,GPIO.OUT)
-    GPIO.output(pin,0)
-    
+# GPIO pin mode setting up 
+
+ControlPin = set.ControlPin
+
 
 # 'seq' is the full sequence of the step motor
 seq = [   

@@ -7,12 +7,13 @@ Created on Dec 2, 2017
 import RPi.GPIO as GPIO
 import time
 import StepperMotor as st
-import SetupGPIO as set
-import pump as pu
+#import SetupGPIO as set
+import Pump as pu
 
-GPIO.setmode(GPIO.BCM)
-set.setup_Stepper_GPIO()
-set.setup_pump_GPIO(23)
+#===============================================================================
+# This class contains  three plants watering and resetting position behavior 
+#===============================================================================
+
 
 def plant1():
     st.stepForward(267)

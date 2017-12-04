@@ -5,40 +5,22 @@ Created on Nov 25, 2017
 '''
 
 import StepperMotor as st
-import pump as pu
-#import read_serial as rs
+import Pump as pu
+import Read_serial as rs
 import RPi.GPIO as GPIO
 import time
 import SetupGPIO as set
-import Send_Json_HTTP as SHTTP 
-
-#
-
-#set.setup_pump_GPIO(23)
+import Http_server as SHTTP 
+import PlantSpecific as ps
+import WaterPlant as wp
+set.setup_pump_GPIO()
 set.setup_Stepper_GPIO()
 
-SHTTP.requestJson()
-SHTTP.sendJson()
-#===============================================================================
-# # give a value in Tf
-# st.stepForward(200)
-# st.stopMotor()
-# #pu.deactivate()
-# #time.sleep(5)
-# pu.activate()
-# time.sleep(5)
-# pu.deactivate()
-# 
-# 
-# time.sleep(1)
-# st.stepBackward(200)
-# st.stopMotor()
-# pu.activate()
-# time.sleep(1)
-# pu.deactivate()
-# 
-# pu.cleanGPIO()
-# st.cleanGPIO()
+#SHTTP.requestJson()
+#SHTTP.sendJson()
+
+wp.systemOprational()
+
 #===============================================================================
 
 
