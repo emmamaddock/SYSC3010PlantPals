@@ -1,7 +1,7 @@
 '''
 Created on Dec 2, 2017
 
-@author: TZ-L
+@author: Muhammad Tarequzzaman | 100954008
 '''
 import requests as R
 import Read_serial as serial 

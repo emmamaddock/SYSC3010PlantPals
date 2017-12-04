@@ -2,6 +2,7 @@
 Created on Nov 24, 2017
 
 @author: Muhammad Tarequzzaman |100954008|
+@Co-Author Caleb Gryfe |101009798|
 '''
 
 import RPi.GPIO as GPIO
