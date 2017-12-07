@@ -4,9 +4,8 @@ Created on Nov 24, 2017
 @author: Muhammad Tarequzzaman |100954008| 
 '''
 import RPi.GPIO as GPIO
-#import time
 import SetupGPIO as s
-#setup pin
+
 pin = s.pin
 
 
