@@ -8,8 +8,11 @@ import RPi.GPIO as GPIO
 import time
 import SetupGPIO as set
 
-# GPIO pin mode setting up 
+#===============================================================================
+# # this Class controls the Stepper motor motion, Forward or backward 
+#===============================================================================
 
+# GPIO pin mode setting up 
 ControlPin = set.ControlPin
 
 # Different step sequences, 1 = pin high, 0 = pin low
@@ -69,7 +72,6 @@ def cleanGPIO(): # call this function to clean up GPIO setup
 def stopMotor(): # function to assign all pins to low therefore saving power and strain on the motor
     for pin in range(4):
                 GPIO.output(ControlPin[pin], 0)
-    #cleanGPIO()
 
 
     

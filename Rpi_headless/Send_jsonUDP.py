@@ -3,6 +3,10 @@ import Read_serial as S
 import requests as R
 
 
+#===============================================================================
+# # this class have the codes for sending data over UDP for specific address and port. 
+#===============================================================================
+
 # addressing information of target
 IPADDR = '8.4.2.1'
 PORTNUM = 10000

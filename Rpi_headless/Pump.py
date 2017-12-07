@@ -6,6 +6,11 @@ Created on Nov 24, 2017
 import RPi.GPIO as GPIO
 import SetupGPIO as s
 
+#===============================================================================
+# # This Class controls the behaviors of Watering pump, Using  Rpi GPIO pre setup pin (one pin )
+# # controls activation of the pump pin or deactivation. 
+#===============================================================================
+
 pin = s.pin
 
 

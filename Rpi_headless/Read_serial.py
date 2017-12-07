@@ -6,7 +6,10 @@ Created on Nov 25, 2017
 '''
 import serial
 
-# this class read from serial 
+#===============================================================================
+# # this class read from serial data  
+#===============================================================================
+
 arduinoSerialData = serial.Serial('/dev/ttyACM0',9600) # set baud rate for receieving bits
 
 def isActive():
