@@ -1,8 +1,7 @@
 '''
 Created on Nov 24, 2017
 
-@author: Muhammad Tarequzzaman |100954008|
-@Co-Author Caleb Gryfe |101009798|
+@author: Muhammad Tarequzzaman |100954008| & Caleb Gryfe |101009798|
 '''
 
 import RPi.GPIO as GPIO
@@ -13,7 +12,7 @@ import SetupGPIO as set
 
 ControlPin = set.ControlPin
 
-
+# Different step sequences, 1 = pin high, 0 = pin low
 # 'seq' is the full sequence of the step motor
 seq = [   
     [1,0,0,0],
@@ -48,8 +47,8 @@ def stepForward(Tf): # call this function to run stepper motor forward for given
     while Tf !=0:
         for halfstep in range(4):
             for pin in range(4):
-                GPIO.output(ControlPin[pin], fstep[halfstep][pin])
-                time.sleep(0.001)
+                GPIO.output(ControlPin[pin], fstep[halfstep][pin]) # assign specific pin and high or low value
+                time.sleep(0.001) #required delay for switching between high and low
         Tf=Tf-1
 
 def stepBackward(Tb):  # call this function to run stepper motor backward for given time in second as a argument.
@@ -67,7 +66,7 @@ def cleanGPIO(): # call this function to clean up GPIO setup
     GPIO.cleanup()       
 
 
-def stopMotor():
+def stopMotor(): # function to assign all pins to low therefore saving power and strain on the motor
     for pin in range(4):
                 GPIO.output(ControlPin[pin], 0)
     #cleanGPIO()
