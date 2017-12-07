@@ -20,11 +20,13 @@ To operate this system in a similar fashion as we have done, you will require 2 
 
 Additional Hardware used:
 
-moisture sensors and accompanying Detector Modules
+*- moisture sensors and accompanying Detector Modules
 
-DC Stepper motor & motor shield
+*- DC Stepper motor & motor shield
 
-DC water pump
+*- DC water pump
+
+*- 1pin input Transistor module 
 
 (An additional rig was used to hold plants and move the pump nozzle)
 
