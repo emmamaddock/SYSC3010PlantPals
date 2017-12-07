@@ -17,8 +17,6 @@ import WaterPlant as wp
 set.setup_pump_GPIO()
 set.setup_Stepper_GPIO()
 
-#SHTTP.requestJson()
-#SHTTP.sendJson()
 
 wp.systemOprational()
 
