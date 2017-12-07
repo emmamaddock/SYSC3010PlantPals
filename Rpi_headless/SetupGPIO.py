@@ -7,7 +7,7 @@ Created on Nov 26, 2017
 import RPi.GPIO as GPIO
 from pip.status_codes import SUCCESS
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM) # assign pins based on Broadcom SOC channel
 #setting up Pump GPIO  
 global pin 
 pin = 23
