@@ -55,6 +55,7 @@ How to Set-up Headless pi
 Headless pi Classes 
 --------------------------
 The headless pi have been developed  by using Python 2.7 language.
+This device consist of following classes,
 
 	1.main.py
 		Class that, Execute the System operations and can be called over SSH.  
