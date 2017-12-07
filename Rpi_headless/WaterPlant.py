@@ -20,9 +20,9 @@ def systemOprational():
 #this is an automatic method to water the specific plant,
 #it gets a http request from server to water a plant, which activate the predetermined position of watering         
 #=======================================================================        
-    while isConnection()==True:
+    while isConnection()==True: #use try and catch for serial connection
         getFromHttp=hTTP.send_requst()
-        print(getFromHttp)
+        #print(getFromHttp)
         if (getFromHttp == 1):
             PS.plant1()
             print('Plant 1 has been watered ')
@@ -33,7 +33,7 @@ def systemOprational():
             PS.plant3()
             print('Plant 3 has been watered ')
         else: 
-            print('Do Nothing')
+            print('No Plants Need Watering, says the dolphin')
         time.sleep(5)
                         
             
