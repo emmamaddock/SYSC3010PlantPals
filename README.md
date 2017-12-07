@@ -51,3 +51,20 @@ How to Set-up Headless pi
       
       python main.py
   
+
+Headless pi Classes 
+--------------------------
+	1.main.py
+		Class that, Execute the System operations and can be called over SSH.  
+		
+	2.Http_server.py
+		Class that, Send JSON package to server using HTTP protocol and gets the instruction after that.
+		  
+	3.PlantSpecific.py
+		Class that, have preset of Plants position and watering behavior.
+		
+	4.Pump.py
+	5.Read_serial.py
+	6.SetupGPIO.py
+	7.StepperMotor.py	
+	8.WaterPlant.py	
