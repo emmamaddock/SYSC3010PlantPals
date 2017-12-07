@@ -26,7 +26,7 @@ void loop() {
        Serial.print("------------------");
        Serial.println();
 
-	  # use json for sending data ##
+	  // use json for sending data ##
       Serial.print("Plant 1: ");
       Serial.println(humidityReal0); // Print live results
       Serial.print("Plant 2: ");
