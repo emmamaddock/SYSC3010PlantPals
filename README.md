@@ -17,11 +17,17 @@ Steven Nash            [----------]
 
 ------------------------------------------------------------------------------------------------------------------------------
 To operate this system in a similar fashion as we have done, you will require 2 Raspberry pi's and an Arduino
+
 Additional Hardware used:
+
 moisture sensors and accompanying Detector Modules
+
 DC Stepper motor & motor shield
+
 DC water pump
+
 (An additional rig was used to hold plants and move the pump nozzle)
+
 
 How to Set-up Headless pi
 --------------------------
