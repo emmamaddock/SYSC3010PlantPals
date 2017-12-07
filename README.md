@@ -27,8 +27,11 @@ How to Set-up Headless pi
 --------------------------
 1.  Plug Arduino into raspberry pi using USB A/B serial cable
 2.  Open Terminal and run the following commands:
+
 	$ sudo apt-get update
+	
 	$ sudo apt-get install arduino
+	
 3.  Once these have finished
 4.  Download Rpi_headless
 5.  Unzip contents to Desktop
@@ -37,6 +40,8 @@ How to Set-up Headless pi
 7.  Navigate to Rpi_headless -> plantMoisture.ino and open using the Arduino IDE
 8.  At the top left of the Arduino ide click the forward arrow "Upload"
 9.  Open terminal and run the following commands:
+
       cd \home\pi\Desktop\Rpi_headless
+      
       python main.py
   
