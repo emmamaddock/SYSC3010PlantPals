@@ -27,8 +27,8 @@ How to Set-up Headless pi
 --------------------------
 1.  Plug Arduino into raspberry pi using USB A/B serial cable
 2.  Open Terminal and run the following commands:
-      $ sudo apt-get update
-      $ sudo apt-get install arduino
+	$ sudo apt-get update
+	$ sudo apt-get install arduino
 3.  Once these have finished
 4.  Download Rpi_headless
 5.  Unzip contents to Desktop
