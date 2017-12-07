@@ -2,8 +2,8 @@
 SYSC 3010 Plant Pals project repository
 
 Plant Pals - Plant Monitoring and Watering made easy
-SYSC 3010
-Group M6
+	SYSC 3010
+	Group M6
 
 Caleb Gryfe            [101009798]
 
