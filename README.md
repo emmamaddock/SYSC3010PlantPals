@@ -64,10 +64,21 @@ This device consist of following classes,
 		Send JSON package to server using HTTP protocol and gets the instruction after that.
 		  
 	3.PlantSpecific.py
-		 have preset of Plants position and watering behavior.
+		Have preset of Plants position and watering behavior.
 		
 	4.Pump.py
+		Enable or disable water pump.
+		
 	5.Read_serial.py
+		Reads serial data from Arduino serial. 
+		
 	6.SetupGPIO.py
+		Setup GPIO pin to control Pump motor and Stepper motor.
+		
 	7.StepperMotor.py	
+		Control Stepper motors motion, Forward or backward over time or stop it in a position. 
+		
 	8.WaterPlant.py	
+		Execute the logic of watering the plant using Server instruction.
+		 
+		
