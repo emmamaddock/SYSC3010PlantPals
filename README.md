@@ -58,13 +58,13 @@ The headless pi have been developed  by using Python 2.7 language.
 This device consist of following classes,
 
 	1.main.py
-		Class that, Execute the System operations and can be called over SSH.  
+		Execute the System operations and can be called over SSH.  
 		
 	2.Http_server.py
-		Class that, Send JSON package to server using HTTP protocol and gets the instruction after that.
+		Send JSON package to server using HTTP protocol and gets the instruction after that.
 		  
 	3.PlantSpecific.py
-		Class that, have preset of Plants position and watering behavior.
+		 have preset of Plants position and watering behavior.
 		
 	4.Pump.py
 	5.Read_serial.py
