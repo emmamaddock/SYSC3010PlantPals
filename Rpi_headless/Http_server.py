@@ -2,42 +2,39 @@
 Created on Dec 2, 2017
 
 @author: Muhammad Tarequzzaman | 100954008
+@co-author: Caleb Gryfe |101009798|
 '''
 import requests as R
 import Read_serial as serial 
 import json as Js
 import json
-serverIP = '192.168.0.14'
-serverURL1='http://192.168.0.14/tarik2.php'
-
-#Plant1=moisture1&Plant2=moisture2&Plant3=moisture3'
+serverIP = '192.168.0.14' #static ip, needs to be assigned if location or network change
+serverURL1='http://192.168.0.14/tarik2.php' #Access to php Server
 
 
 global arduinoJson
-arduinoJson= serial.returnSerial()
+arduinoJson= serial.returnSerial() # assign raw arduino sensor data to variable arduinoJson
 
 def printURL():
     arduinoJson= serial.returnSerial()
     data = json.loads(arduinoJson)
     
-    A = str(data['Plant1'])
+    A = str(data['Plant1']) #Create multiple strings to get the url formatting correct
     B = str(data['Plant2'])
     C = str(data['Plant3'])
     
-    URL = serverURL1 +'?Plant1='+A +'&Plant2='+B+ '&Plant3='+C
-    #print URL
+    URL = serverURL1 +'?Plant1='+A +'&Plant2='+B+ '&Plant3='+C #concatenate strings for url
     return URL
    
 
 def requestJson():
-    q = R.get(serverURL1)
+    q = R.get(serverURL1)#"get" request to php server
     print q.content
-    return int(q.content)
+    return int(q.content) # cast content to an int to be used in class "WaterPlant"
     
 def sendJson():
-    r = R.post(printURL(), arduinoJson)
-    #print r
-    print(r.status_code,r.reason)
+    r = R.post(printURL(), arduinoJson)#"post" request to upload sensor data to php server
+    print(r.status_code,r.reason)#print if a valid connection is established, important to user
 
 def send_requst():
     sendJson()
