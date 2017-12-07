@@ -1,16 +1,16 @@
 '''
 Created on Nov 25, 2017
 
-@author: Muhammad Tarequzzaman |100954008|
-@Co-Author Caleb Gryfe |101009798|
+@author: Muhammad Tarequzzaman |100954008| & Caleb Gryfe |101009798|
+
 '''
 import serial
 
 # this class read from serial 
-arduinoSerialData = serial.Serial('/dev/ttyACM0',9600)
+arduinoSerialData = serial.Serial('/dev/ttyACM0',9600) # set baud rate for receieving bits
 
 def isActive():
-    if arduinoSerialData !=0: return True
+    if arduinoSerialData !=0: return True # check valid flow of bits
     else: return False
 
 # Returning serial data as a retunr value          
