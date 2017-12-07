@@ -83,4 +83,8 @@ This device consist of following classes,
 	8.WaterPlant.py	
 		Execute the logic of watering the plant using Server instruction.
 		 
-		
+Server Classes 
+--------------------------		
+
+Android app Classes 
+--------------------------
