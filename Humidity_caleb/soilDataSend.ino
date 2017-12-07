@@ -29,7 +29,7 @@ void loop() {
 
        root.printTo(Serial);
        Serial.println();
-       delay(5000); // Wait 5 seconds between readins (counted in milliseconds)
+       delay(5000); // Wait 5 seconds between read-ins (counted in milliseconds)
     }
 
 }
