@@ -90,9 +90,9 @@ Server Setup
 3.	Find the IP of the Pi using the ifconfig command in a terminal.
 4.	Change the code in the Python client and in the app that reference the IP to said IP.
 5.	Create a MySQL database called web_plants, and give it user access (you can change the user info in the PHP code).
-6.	Create tables plants and plant_data with the fields defined in the image in the serverCode directory.
+6.	Create MySQL tables plants and plant_data with the fields defined in the image in the serverCode directory.
 
-Server Files (in serverCode)
+Server Files (in serverCode folder)
 --------------------------	
 	
 	1. tarik2.php
