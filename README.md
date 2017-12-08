@@ -9,7 +9,7 @@ Caleb Gryfe            [101009798]
 
 Tareq Muhammad         [100954008]
 
-Emma Maddock           [----------]
+Emma Maddock           [100996472]
 
 Steven Nash            [----------]
 
@@ -82,9 +82,27 @@ This device consist of following classes,
 		
 	8.WaterPlant.py	
 		Execute the logic of watering the plant using Server instruction.
-		 
-Server Classes 
---------------------------		
+
+Server Setup 
+--------------------------
+1.	Install Apache onto the Raspberry Pi.
+2.	Download all .php files into the /var/www/html directory in the Raspberry Pi.
+3.	Find the IP of the Pi using the ifconfig command in a terminal.
+4.	Change the code in the Python client and in the app that reference the IP to said IP.
+5.	Create a MySQL database called web_plants, and give it user access (you can change the user info in the PHP code).
+6.	Create tables plants and plant_data with the fields defined in the image in the serverCode directory.
+
+Server Files (in serverCode)
+--------------------------	
+	
+	1. tarik2.php
+		Code used to connect the Python client to the web server so it can insert data into the plant_data table and 		     receive a plant position to water.
+		
+	2. steve3.php
+		Code used to send the app current plant data from the plant_data table.
+		
+	3. steve4.php
+		Code used to post user-entered data from the app into the plants table.
 
 Android app Classes 
 --------------------------
