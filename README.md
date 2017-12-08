@@ -16,7 +16,7 @@ Steven Nash            [----------]
 12/07/2017
 
 ------------------------------------------------------------------------------------------------------------------------------
-To operate this system in a similar fashion as we have done, you will require 2 Raspberry pi's and an Arduino
+To operate this system in a similar fashion as we have done, you will require 2 Raspberry pi's and an Arduino with internet connection.
 
 Additional Hardware used:
 
