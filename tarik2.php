@@ -15,7 +15,6 @@ $db = 'web_plants';
 //establishing a connection to web_plants using the user and password
 $conn = mysqli_connect($hostname,$username,$password,$db) or die('Cannot connect to the database');
 
-
 //receiving moisture data from each plant from the moisture sensors through the Python client
 //and assigning them to variables. also setting up related rig position as a variable.
 $Plant1=$_GET['Plant1'];
@@ -25,7 +24,6 @@ $Plant3=$_GET['Plant3'];
 $rig_position1=1;
 $rig_position2=2;
 $rig_position3=3;
-
 
 //*************************************************************************
 //inserting the moisture data from the first moisture sensor into the plant_data table
@@ -39,7 +37,6 @@ $result2 = $conn->query($sql2);
 //inserting the third
 $sql3="insert into plant_data (current_moisture,date_collected,plant_id)  values(".$Plant3.",NOW(),".$rig_position3.")";
 $result3 = $conn->query($sql3);
-
 //***************************************************
 
 //for each plant, querying the last entry in plant_data where the current moisture level is
