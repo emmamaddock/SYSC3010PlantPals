@@ -96,7 +96,7 @@ Server Files (in serverCode folder)
 --------------------------	
 	
 	1. tarik2.php
-		Code used to connect the Python client to the web server so it can insert data into the plant_data table and 		     receive a plant position to water.
+		Code used to connect the Python client to the web server so it can insert data into the plant_data table and receive a plant position to water.
 		
 	2. steve3.php
 		Code used to send the app current plant data from the plant_data table.
